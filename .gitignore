@@ -1,0 +1,11 @@
+composer-data.json
+composer.lock
+composer.phar
+coverage.txt
+phpunit.xml
+tmp.json
+.project
+.buildpath
+/vendor
+/coverage
+/.settings

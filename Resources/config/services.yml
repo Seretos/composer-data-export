@@ -1,0 +1,8 @@
+services:
+    platform.repository:
+        class: Composer\Repository\PlatformRepository
+    json.export.factory:
+        class: Export\Composer\Service\ExportFactory
+    json.export.service:
+        class: Export\Composer\Service\ExportService
+        arguments: ['@json.export.factory','@platform.repository']

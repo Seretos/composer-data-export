@@ -1,0 +1,21 @@
+<phpunit>
+	<logging>
+	  <log type="coverage-text" target="coverage.txt" showUncoveredFiles="true"/>
+	  <log type="coverage-html" target="coverage" showUncoveredFiles="true"/>
+	</logging>
+
+	<testsuites>
+        <testsuite name="composer-data-export unit tests">
+            <directory>tests</directory>
+        </testsuite>
+    </testsuites>
+    
+    <filter>
+        <whitelist>
+            <directory>src</directory>
+            <exclude>
+            	<file>src/bootstrap.php</file>
+            </exclude>
+        </whitelist>
+    </filter>
+</phpunit>
