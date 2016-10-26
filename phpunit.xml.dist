@@ -1,7 +1,6 @@
 <phpunit>
 	<logging>
 	  <log type="coverage-text" target="coverage.txt" showUncoveredFiles="true"/>
-	  <log type="coverage-html" target="coverage" showUncoveredFiles="true"/>
 	</logging>
 
 	<testsuites>
