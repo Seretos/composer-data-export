@@ -86,7 +86,13 @@ class ExportService {
         foreach ($this->packages as $package) {
             if (in_array($package->getName(), $installed)) {
                 if (is_object($package)) {
-                    $result['packages'][] = $this->convertPackage($package, $composer);
+                    $resultPackage = $this->convertPackage($package, $composer);
+                    if ($package == $composer->getPackage()) {
+                        $resultPackage['path'] = dirname($composer->getConfig()
+                                                                  ->getConfigSource()
+                                                                  ->getName());
+                    }
+                    $result['packages'][] = $resultPackage;
                 }
             }
         }
